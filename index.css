@@ -227,8 +227,8 @@ p {
     .hover-box {
         z-index: 1;
         border-radius: 30px;
-        width: 50vh;
-        height: 57vh;
+        width: 45vh;
+        height: 55vh;
         background: #912a7e;
         color: #fff;
         padding: 10px;
@@ -262,7 +262,7 @@ p {
         z-index: 1;
         border-radius: 30px;
         width: 35vh;
-        height: 45vh;
+        height: 40vh;
         background: #912a7e;
         color: #fff;
         padding: 10px;
