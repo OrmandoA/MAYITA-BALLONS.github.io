@@ -1,0 +1,533 @@
+:root {
+    --blue: #12d2db;
+    --white: #fcf2fa;
+    --purple: #912a7eaa;
+    --purple-blc: #230622dd;
+    --shadow: 0 5px 10px 5px rgba(0,0,0, 0.3);
+    --navColor: linear-gradient(to right, rgba(178,47,147,0.6)5% , rgba(35,6,34, 0.9));
+
+}
+.logo-principal img {
+    z-index: 1000;
+    position: relative;
+    top: 10px;
+    left: 30%;
+    height: 70px;
+    width: 140px;
+    background-size: cover;
+}
+
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('fondo.jpg');
+}
+
+
+/* Estilos para la barra de navegación */
+nav {
+    background: var(--purple);
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.3);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    
+}
+
+label.logo {
+    color: var(--white);
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 80px;
+    letter-spacing: -1px;
+    font-weight: 800;
+    font-style: italic;
+    transition: .6s ease;
+    text-shadow: 3px 5px 20px #230622aa;
+}
+
+nav ul {
+    float: right;
+    margin-right: 80px;
+}
+
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    font-size: 20px; /*para agrandar la letra de opciones about services y contacts us*/
+}
+
+
+nav ul li a {
+    color: #fff;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 13px;
+    text-transform: lowercase;
+    position: relative;
+    text-decoration: none;
+}
+
+
+a.active,
+a:hover {
+    background: #230622dd;
+    transition: .5s;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #912a7eaa; /* Este es el color de las líneas */
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Estilos para los efectos de hover en los enlaces del menú */
+nav ul li {
+    display: inline-block;
+    /*line-height: 80px;*/
+    position: relative;
+}
+
+.hover-box {
+    z-index: 1;
+    border-radius: 30px;
+    width: 62vh;
+    height: 62vh;
+    background: #912a7e;
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+nav ul li:hover .hover-box {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hover-box-1 {
+    z-index: 1;
+    border-radius: 30px;
+    width: 50vh;
+    height: 50vh;
+    background: #912a7e;
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+nav ul li:hover .hover-box-1 {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hover-box-2 {
+    z-index: 1;
+    border-radius: 30px;
+    width: 40vh;
+    height: 60vh;
+    background: #912a7e;
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+nav ul li:hover .hover-box-2 {
+    opacity: 1;
+    visibility: visible;
+}
+
+#check{
+
+	display: none; /*DESAPARECE EL CHECK */
+}
+
+p {
+	line-height: 27px;
+    color: #fff;
+    font-size: 1.2em;
+    opacity: 0.85;
+}
+
+
+.checkbtn {
+    line-height: 80px;
+    font-size: 30px;
+    float: right;
+    cursor: pointer;
+    margin-right: 40px;
+    display: none;  /*deparece el logo de menu*/
+}
+
+.checkbtn i {
+    color:  var(--white);
+    padding: 5px;
+    border-radius: 10px;
+    transition: .5s ease;
+}
+
+.checkbtn i:hover {
+    background: var(--purple-blc);
+
+}
+
+
+/*---------------RESPONSE CODE -- RESOLUCION CELULAR-----------------*/
+
+@media (max-width: 858px) {
+    .logo-principal img {
+        position: absolute;
+        top: 28px;
+        left: 40%;
+        height: 50px;
+        width: 140px;
+        background-size: cover;
+        
+
+    }
+    .hover-box {
+        z-index: 1;
+        border-radius: 30px;
+        width: 48vh;
+        height: 48vh;
+        background: #912a7e;
+        color: #fff;
+        padding: 10px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .hover-box-1 {
+        z-index: 1;
+        border-radius: 30px;
+        width: 40vh;
+        height: 40vh;
+        background: #912a7e;
+        color: #fff;
+        padding: 10px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .hover-box-2 {
+        z-index: 1;
+        border-radius: 30px;
+        width: 30vh;
+        height: 30vh;
+        background: #912a7e;
+        color: #fff;
+        padding: 10px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+
+    .checkbtn {
+        display: block;
+
+    }
+
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--purple-blc);
+        top: 80px;
+        left: -100%;
+        padding-top: 80px;
+        text-align: center;
+        transition: .5s ease;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 30px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+
+    }
+    a .active, a:hover {
+        background: none;
+        color: var(--blue);
+        text-shadow: 0 10px 15px var(--blue);
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    label.logo {
+    color: var(--white);
+    font-size: 30px;
+    line-height: 25px;
+    padding: 0 80px;
+    letter-spacing: -1px;
+    font-weight: 800;
+    font-style: italic;
+    transition: .6s ease;
+    text-shadow: 3px 5px 20px #230622aa;
+}
+}
+
+
+
+
+
+
+/* ------------------Estilos para la tarjeta del producto -----------------*/
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 80px 0;
+    /*background: linear-gradient(#01c2bf 0, #01c2bf 50%, #fff 50%, #fff 100%);*/
+}
+
+.card {
+    border-radius: 10px;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #0000;
+    display: flex;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+
+}
+
+.card:hover {
+    width: 600px;
+}
+
+.card .imgBx {
+    background-size: cover;
+    position: relative;
+    min-width: 300px;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.card .imgBx img {
+    max-width: 300px;
+    transition: 0.5s ease-in-out;
+}
+
+.card .details {
+    position: absolute;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background: #230622dd;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover .details {
+    left: 300px;
+}
+
+.card .details::before {
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #fff;
+    z-index: 1;
+}
+
+.card .details h3 {
+    position: relative;
+    top: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 0.5em;
+}
+
+.card .details h3 span {
+    font-size: 0.65em;
+    font-weight: 300;
+    opacity: 0.85;
+    text-transform: none;
+}
+
+.card .details h4 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9em;
+    line-height: 1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.size {
+    display: flex;
+    gap: 10px;
+}
+
+.size li {
+    list-style: none;
+    color: #fff;
+    font-size: 0.9em;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.size li:hover {
+    background: #fff;
+    color: #01c2bf;
+    opacity: 1;
+}
+
+.group {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center; 
+    font-size: 10px;
+}
+
+.card .details h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.card .details h2 sup {
+    font-weight: 300;
+}
+
+.card .details h2 small {
+    font-size: 0.75em;
+}
+
+.card .details a {
+    display: inline-flex;
+    padding: 10px 25px;
+    background: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #01c2bf;
+    border-radius: 15px; /* BOTON DE CARD "Ver" */
+}
+
+video {
+    z-index: 500;
+    width: 300px;
+    height: 300px;
+    background-image: url('fondo.jpg');
+}
+
+
+
+
+
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .card {
+        height: auto;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        width: 300px;
+    }
+
+    .card .details {
+        left: 0;
+        display: none;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        position: relative;
+        padding: 0;
+        transition: 0.5s ease-in-out;
+    }
+
+    .card:hover .details {
+        left: 0;
+        display: block;
+        max-height: 100%;
+    }
+}
