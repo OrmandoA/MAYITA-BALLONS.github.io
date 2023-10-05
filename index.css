@@ -261,8 +261,8 @@ p {
     .hover-box-2 {
         z-index: 1;
         border-radius: 30px;
-        width: 30vh;
-        height: 30vh;
+        width: 35vh;
+        height: 45vh;
         background: #912a7e;
         color: #fff;
         padding: 10px;
