@@ -227,8 +227,8 @@ p {
     .hover-box {
         z-index: 1;
         border-radius: 30px;
-        width: 54vh;
-        height: 54vh;
+        width: 60vh;
+        height: 60vh;
         background: #912a7e;
         color: #fff;
         padding: 10px;
